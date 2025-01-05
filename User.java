@@ -56,7 +56,8 @@
         if (follows(name) || fCount==maxfCount) {
             return false;
         }
-        this.follows[fCount]+=name;
+        this.follows[fCount]=name;
+        fCount++;
         return true;
     }
 

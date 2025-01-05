@@ -41,6 +41,7 @@ public class Network {
         //// Replace the following statement with your code
         return false;
     }
+    
 
     /** Makes the user with name1 follow the user with name2. If successful, returns true.
      *  If any of the two names is not a user in this network,
