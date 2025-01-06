@@ -30,7 +30,7 @@ public class Network {
      *  Notice that the method receives a String, and returns a User object. */
     public User getUser(String name) {
         for (int i = 0; i < userCount; i++) {
-            if (name==users[i].getName()) {
+            if (name.equals(users[i].getName())) {
                 return users[i];
             }
         }
@@ -42,7 +42,7 @@ public class Network {
     *  If the given name is already a user in this network, does nothing and returns false;
     *  Otherwise, creates a new user with the given name, adds the user to this network, and returns true. */
     public boolean addUser(String name) {
-        if ( getUser(name)==null|| this.getUserCount()==users.length) {
+        if ( getUser(name)!=null|| this.getUserCount()==users.length) {
             return false;
         }
         users[this.getUserCount()]= new User(name);
@@ -110,7 +110,7 @@ public class Network {
     public String toString() {
         String str = "Network: ";
        for (int i = 0; i <this.userCount; i++) {
-            str= "\n" + users[i].toString();
+            str+= "\n" + users[i].toString();
        }
        return str;
     }
