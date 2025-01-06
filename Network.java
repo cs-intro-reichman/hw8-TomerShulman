@@ -68,7 +68,7 @@ public class Network {
         int countRecommend=0;
 
         for (int i = 0; i < userCount; i++) {
-            if(getUser(name).equals(users[i])){
+            if(getUser(name)==(users[i])){
                 continue;
             }
             if(countRecommend<=getUser(name).countMutual(users[i])){
